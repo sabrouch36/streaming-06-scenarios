@@ -108,7 +108,7 @@ open a machine terminal in your `Repos` folder:
 
 ```bash
 # Replace username with YOUR GitHub username.
-git clone https://github.com/username/streaming-06-scenarios
+git clone https://github.com/sabrouch36/streaming-06-scenarios
 
 cd streaming-06-scenarios
 code .
