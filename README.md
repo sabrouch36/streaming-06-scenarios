@@ -154,7 +154,7 @@ bin/kafka-storage.sh format --standalone -t "$KAFKA_CLUSTER_ID" -c config/server
 Step 3. Start kafka server (keep running)
 
 ```bash
-cd ~/kafka
+cd ~kafka/
 
 bin/kafka-server-start.sh config/server.properties
 ```
@@ -253,3 +253,16 @@ If you see something like this in your terminal: `>>>` or `...`
 You accidentally started Python interactive mode.
 It happens.
 Press `Ctrl+c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
+
+### My Modification
+
+I added a high-value order detection feature to the Kafka consumer.
+
+After calculating the derived fields, the consumer now creates a new field called `high_value_order`.
+Orders with a total value of $150 or greater are flagged as high-value orders.
+
+When a high-value order is detected, the consumer writes a special log message (`HIGH VALUE ORDER
+DETECTED`) to make important sales easier to identify during streaming.
+
+This modification improves observability and provides a simple way to monitor significant transactions
+in the data stream.
