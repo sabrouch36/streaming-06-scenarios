@@ -762,3 +762,1319 @@ CHECK:
 2026-06-18 15:15:19 | INFO | C06 | ========================
 2026-06-18 15:15:19 | INFO | C06 | Consumer executed successfully!
 2026-06-18 15:15:19 | INFO | C06 | ========================
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | KAFKA_BROKER_ADDRESS_FAMILY       = v4
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 3
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | PRODUCER_MAX_MESSAGES             = 50
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-06-20 01:29:38 | DEBUG | P06-WORLD-CUP | CONSUMER_MAX_MESSAGES             = 1000
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | === RUN START ===
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | project=P06 WORLD CUP
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | repo_dir=streaming-06-scenarios
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | python=3.14.4
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | os=Windows 11
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | shell=powershell
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | cwd=.
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | github_actions=False
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | START producer main()
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | ROOT_DIR = .
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | DATA_DIR = data
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | WORLD_CUP_MATCHES_CSV = data\world_cup_matches.csv
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | REJECTED_MATCHES_CSV = data\output\producer_rejected_world_cup_matches.csv
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | SECTION A. Acquire
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | Loading settings from .env...
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 3
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | Verifying Kafka connection...
+2026-06-20 01:29:38 | INFO | P06-WORLD-CUP | Kafka port is reachable.
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | SECTION P. Produce Messages
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | Initializing output...
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | Output directory ready: output
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | Sending World Cup match messages...
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | Sending up to 3 message(s) to topic 'streaming-06-scenarios-case'.
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | Watch each completed match arrive. Press CTRL+C to stop early.
+
+2026-06-20 01:29:39 | INFO | P06-WORLD-CUP | {
+  ﻿match_id: WC2026-001
+  match_date: 2026-06-11
+  stage: Group Stage
+  matchday: 1
+  group: A
+  home_team_code: MEX
+  home_team: Mexico
+  away_team_code: RSA
+  away_team: South Africa
+  home_goals: 2
+  away_goals: 0
+  winner: Mexico
+  result_type: home_win
+  total_goals: 2
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Mexico City Stadium
+  common_stadium_name: Estadio Azteca
+  city: Mexico City
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:29:39 | WARNING | P06-WORLD-CUP | MATCH MESSAGE REJECTED
+2026-06-20 01:29:39 | WARNING | P06-WORLD-CUP |   errors=['Missing required field: match_id']
+2026-06-20 01:29:39 | ERROR | P06-WORLD-CUP | dict contains fields not in fieldnames: '\ufeffmatch_id'
+2026-06-20 01:29:39 | ERROR | P06-WORLD-CUP | Producer stopped before completing all messages.
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | KAFKA_BROKER_ADDRESS_FAMILY       = v4
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 3
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | PRODUCER_MAX_MESSAGES             = 50
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-06-20 01:30:31 | DEBUG | P06-WORLD-CUP | CONSUMER_MAX_MESSAGES             = 1000
+2026-06-20 01:30:31 | INFO | P06-WORLD-CUP | === RUN START ===
+2026-06-20 01:30:31 | INFO | P06-WORLD-CUP | project=P06 WORLD CUP
+2026-06-20 01:30:31 | INFO | P06-WORLD-CUP | repo_dir=streaming-06-scenarios
+2026-06-20 01:30:31 | INFO | P06-WORLD-CUP | python=3.14.4
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | os=Windows 11
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | shell=powershell
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | cwd=.
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | github_actions=False
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | START producer main()
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ROOT_DIR = .
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | DATA_DIR = data
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | WORLD_CUP_MATCHES_CSV = data\world_cup_matches.csv
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | REJECTED_MATCHES_CSV = data\output\producer_rejected_world_cup_matches.csv
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | SECTION A. Acquire
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Loading settings from .env...
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 3
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Verifying Kafka connection...
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Kafka port is reachable.
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | SECTION P. Produce Messages
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Initializing output...
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Output directory ready: output
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Sending World Cup match messages...
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Sending up to 3 message(s) to topic 'streaming-06-scenarios-case'.
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | Watch each completed match arrive. Press CTRL+C to stop early.
+
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-001
+  match_date: 2026-06-11
+  stage: Group Stage
+  matchday: 1
+  group: A
+  home_team_code: MEX
+  home_team: Mexico
+  away_team_code: RSA
+  away_team: South Africa
+  home_goals: 2
+  away_goals: 0
+  winner: Mexico
+  result_type: home_win
+  total_goals: 2
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Mexico City Stadium
+  common_stadium_name: Estadio Azteca
+  city: Mexico City
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-001 with group key=A
+2026-06-20 01:30:32 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=1
+2026-06-20 01:30:34 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-002
+  match_date: 2026-06-11
+  stage: Group Stage
+  matchday: 1
+  group: A
+  home_team_code: KOR
+  home_team: Korea Republic
+  away_team_code: CZE
+  away_team: Czechia
+  home_goals: 2
+  away_goals: 1
+  winner: Korea Republic
+  result_type: home_win
+  total_goals: 3
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Guadalajara Stadium
+  common_stadium_name: Estadio Akron
+  city: Guadalajara
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:30:34 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-002 with group key=A
+2026-06-20 01:30:34 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=2
+2026-06-20 01:30:36 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-003
+  match_date: 2026-06-12
+  stage: Group Stage
+  matchday: 1
+  group: B
+  home_team_code: CAN
+  home_team: Canada
+  away_team_code: BIH
+  away_team: Bosnia and Herzegovina
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Toronto Stadium
+  common_stadium_name: BMO Field
+  city: Toronto
+  host_country: Canada
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:30:36 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-003 with group key=B
+2026-06-20 01:30:36 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=3
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | Checking for rejected records...
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | No records rejected.
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | SECTION E. Exit
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | Summary:
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | Sent 3 completed match message(s).
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | Rejected 0 match message(s).
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | Kafka topic: 'streaming-06-scenarios-case'
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | World Cup producer executed successfully!
+2026-06-20 01:30:38 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | KAFKA_BROKER_ADDRESS_FAMILY       = v4
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 30
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | PRODUCER_MAX_MESSAGES             = 50
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-06-20 01:31:32 | DEBUG | P06-WORLD-CUP | CONSUMER_MAX_MESSAGES             = 1000
+2026-06-20 01:31:32 | INFO | P06-WORLD-CUP | === RUN START ===
+2026-06-20 01:31:32 | INFO | P06-WORLD-CUP | project=P06 WORLD CUP
+2026-06-20 01:31:32 | INFO | P06-WORLD-CUP | repo_dir=streaming-06-scenarios
+2026-06-20 01:31:32 | INFO | P06-WORLD-CUP | python=3.14.4
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | os=Windows 11
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | shell=powershell
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | cwd=.
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | github_actions=False
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | START producer main()
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ROOT_DIR = .
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | DATA_DIR = data
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | WORLD_CUP_MATCHES_CSV = data\world_cup_matches.csv
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | REJECTED_MATCHES_CSV = data\output\producer_rejected_world_cup_matches.csv
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | SECTION A. Acquire
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Loading settings from .env...
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 30
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2.0
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = True
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Verifying Kafka connection...
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Kafka port is reachable.
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | SECTION P. Produce Messages
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Initializing output...
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Output directory ready: output
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Sending World Cup match messages...
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Sending up to 30 message(s) to topic 'streaming-06-scenarios-case'.
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | Watch each completed match arrive. Press CTRL+C to stop early.
+
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-001
+  match_date: 2026-06-11
+  stage: Group Stage
+  matchday: 1
+  group: A
+  home_team_code: MEX
+  home_team: Mexico
+  away_team_code: RSA
+  away_team: South Africa
+  home_goals: 2
+  away_goals: 0
+  winner: Mexico
+  result_type: home_win
+  total_goals: 2
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Mexico City Stadium
+  common_stadium_name: Estadio Azteca
+  city: Mexico City
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-001 with group key=A
+2026-06-20 01:31:33 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=1
+2026-06-20 01:31:35 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-002
+  match_date: 2026-06-11
+  stage: Group Stage
+  matchday: 1
+  group: A
+  home_team_code: KOR
+  home_team: Korea Republic
+  away_team_code: CZE
+  away_team: Czechia
+  home_goals: 2
+  away_goals: 1
+  winner: Korea Republic
+  result_type: home_win
+  total_goals: 3
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Guadalajara Stadium
+  common_stadium_name: Estadio Akron
+  city: Guadalajara
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:35 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-002 with group key=A
+2026-06-20 01:31:35 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=2
+2026-06-20 01:31:37 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-003
+  match_date: 2026-06-12
+  stage: Group Stage
+  matchday: 1
+  group: B
+  home_team_code: CAN
+  home_team: Canada
+  away_team_code: BIH
+  away_team: Bosnia and Herzegovina
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Toronto Stadium
+  common_stadium_name: BMO Field
+  city: Toronto
+  host_country: Canada
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:37 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-003 with group key=B
+2026-06-20 01:31:37 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=3
+2026-06-20 01:31:39 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-004
+  match_date: 2026-06-12
+  stage: Group Stage
+  matchday: 1
+  group: D
+  home_team_code: USA
+  home_team: United States
+  away_team_code: PAR
+  away_team: Paraguay
+  home_goals: 4
+  away_goals: 1
+  winner: United States
+  result_type: home_win
+  total_goals: 5
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Los Angeles Stadium
+  common_stadium_name: SoFi Stadium
+  city: Los Angeles
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:39 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-004 with group key=D
+2026-06-20 01:31:39 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=4
+2026-06-20 01:31:41 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-005
+  match_date: 2026-06-13
+  stage: Group Stage
+  matchday: 1
+  group: B
+  home_team_code: QAT
+  home_team: Qatar
+  away_team_code: SUI
+  away_team: Switzerland
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: San Francisco Bay Area Stadium
+  common_stadium_name: Levi's Stadium
+  city: Santa Clara
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:41 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-005 with group key=B
+2026-06-20 01:31:41 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=5
+2026-06-20 01:31:43 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-006
+  match_date: 2026-06-13
+  stage: Group Stage
+  matchday: 1
+  group: C
+  home_team_code: BRA
+  home_team: Brazil
+  away_team_code: MAR
+  away_team: Morocco
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: New York New Jersey Stadium
+  common_stadium_name: MetLife Stadium
+  city: East Rutherford
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:43 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-006 with group key=C
+2026-06-20 01:31:43 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=6
+2026-06-20 01:31:45 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-007
+  match_date: 2026-06-13
+  stage: Group Stage
+  matchday: 1
+  group: C
+  home_team_code: HTI
+  home_team: Haiti
+  away_team_code: SCO
+  away_team: Scotland
+  home_goals: 0
+  away_goals: 1
+  winner: Scotland
+  result_type: away_win
+  total_goals: 1
+  home_points: 0
+  away_points: 3
+  fifa_venue_name: Boston Stadium
+  common_stadium_name: Gillette Stadium
+  city: Foxborough
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:45 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-007 with group key=C
+2026-06-20 01:31:45 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=7
+2026-06-20 01:31:47 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-008
+  match_date: 2026-06-13
+  stage: Group Stage
+  matchday: 1
+  group: D
+  home_team_code: AUS
+  home_team: Australia
+  away_team_code: TUR
+  away_team: Türkiye
+  home_goals: 2
+  away_goals: 0
+  winner: Australia
+  result_type: home_win
+  total_goals: 2
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: BC Place Vancouver
+  common_stadium_name: BC Place
+  city: Vancouver
+  host_country: Canada
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:47 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-008 with group key=D
+2026-06-20 01:31:47 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=8
+2026-06-20 01:31:49 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-009
+  match_date: 2026-06-14
+  stage: Group Stage
+  matchday: 1
+  group: E
+  home_team_code: CIV
+  home_team: Côte d'Ivoire
+  away_team_code: ECU
+  away_team: Ecuador
+  home_goals: 1
+  away_goals: 0
+  winner: Côte d'Ivoire
+  result_type: home_win
+  total_goals: 1
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Philadelphia Stadium
+  common_stadium_name: Lincoln Financial Field
+  city: Philadelphia
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:49 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-009 with group key=E
+2026-06-20 01:31:49 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=9
+2026-06-20 01:31:51 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-010
+  match_date: 2026-06-14
+  stage: Group Stage
+  matchday: 1
+  group: E
+  home_team_code: GER
+  home_team: Germany
+  away_team_code: CUW
+  away_team: Curaçao
+  home_goals: 7
+  away_goals: 1
+  winner: Germany
+  result_type: home_win
+  total_goals: 8
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Houston Stadium
+  common_stadium_name: NRG Stadium
+  city: Houston
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:51 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-010 with group key=E
+2026-06-20 01:31:51 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=10
+2026-06-20 01:31:53 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-011
+  match_date: 2026-06-14
+  stage: Group Stage
+  matchday: 1
+  group: F
+  home_team_code: NED
+  home_team: Netherlands
+  away_team_code: JPN
+  away_team: Japan
+  home_goals: 2
+  away_goals: 2
+  winner: Draw
+  result_type: draw
+  total_goals: 4
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Dallas Stadium
+  common_stadium_name: AT&T Stadium
+  city: Arlington
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:53 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-011 with group key=F
+2026-06-20 01:31:53 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=11
+2026-06-20 01:31:55 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-012
+  match_date: 2026-06-14
+  stage: Group Stage
+  matchday: 1
+  group: F
+  home_team_code: SWE
+  home_team: Sweden
+  away_team_code: TUN
+  away_team: Tunisia
+  home_goals: 5
+  away_goals: 1
+  winner: Sweden
+  result_type: home_win
+  total_goals: 6
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Monterrey Stadium
+  common_stadium_name: Estadio BBVA
+  city: Monterrey
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:55 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-012 with group key=F
+2026-06-20 01:31:55 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=12
+2026-06-20 01:31:57 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-013
+  match_date: 2026-06-15
+  stage: Group Stage
+  matchday: 1
+  group: G
+  home_team_code: BEL
+  home_team: Belgium
+  away_team_code: EGY
+  away_team: Egypt
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Seattle Stadium
+  common_stadium_name: Lumen Field
+  city: Seattle
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:57 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-013 with group key=G
+2026-06-20 01:31:57 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=13
+2026-06-20 01:31:59 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-014
+  match_date: 2026-06-15
+  stage: Group Stage
+  matchday: 1
+  group: G
+  home_team_code: IRN
+  home_team: IR Iran
+  away_team_code: NZL
+  away_team: New Zealand
+  home_goals: 2
+  away_goals: 2
+  winner: Draw
+  result_type: draw
+  total_goals: 4
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Los Angeles Stadium
+  common_stadium_name: SoFi Stadium
+  city: Los Angeles
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:31:59 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-014 with group key=G
+2026-06-20 01:31:59 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=14
+2026-06-20 01:32:01 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-015
+  match_date: 2026-06-15
+  stage: Group Stage
+  matchday: 1
+  group: H
+  home_team_code: ESP
+  home_team: Spain
+  away_team_code: CPV
+  away_team: Cabo Verde
+  home_goals: 0
+  away_goals: 0
+  winner: Draw
+  result_type: draw
+  total_goals: 0
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Atlanta Stadium
+  common_stadium_name: Mercedes-Benz Stadium
+  city: Atlanta
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:01 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-015 with group key=H
+2026-06-20 01:32:01 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=15
+2026-06-20 01:32:03 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-016
+  match_date: 2026-06-15
+  stage: Group Stage
+  matchday: 1
+  group: H
+  home_team_code: KSA
+  home_team: Saudi Arabia
+  away_team_code: URU
+  away_team: Uruguay
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Miami Stadium
+  common_stadium_name: Hard Rock Stadium
+  city: Miami Gardens
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:03 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-016 with group key=H
+2026-06-20 01:32:03 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=16
+2026-06-20 01:32:05 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-017
+  match_date: 2026-06-16
+  stage: Group Stage
+  matchday: 1
+  group: I
+  home_team_code: FRA
+  home_team: France
+  away_team_code: SEN
+  away_team: Senegal
+  home_goals: 3
+  away_goals: 1
+  winner: France
+  result_type: home_win
+  total_goals: 4
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: New York New Jersey Stadium
+  common_stadium_name: MetLife Stadium
+  city: East Rutherford
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:05 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-017 with group key=I
+2026-06-20 01:32:05 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=17
+2026-06-20 01:32:07 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-018
+  match_date: 2026-06-16
+  stage: Group Stage
+  matchday: 1
+  group: I
+  home_team_code: IRQ
+  home_team: Iraq
+  away_team_code: NOR
+  away_team: Norway
+  home_goals: 1
+  away_goals: 4
+  winner: Norway
+  result_type: away_win
+  total_goals: 5
+  home_points: 0
+  away_points: 3
+  fifa_venue_name: Boston Stadium
+  common_stadium_name: Gillette Stadium
+  city: Foxborough
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:07 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-018 with group key=I
+2026-06-20 01:32:07 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=18
+2026-06-20 01:32:09 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-019
+  match_date: 2026-06-16
+  stage: Group Stage
+  matchday: 1
+  group: J
+  home_team_code: ARG
+  home_team: Argentina
+  away_team_code: ALG
+  away_team: Algeria
+  home_goals: 3
+  away_goals: 0
+  winner: Argentina
+  result_type: home_win
+  total_goals: 3
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Kansas City Stadium
+  common_stadium_name: Arrowhead Stadium
+  city: Kansas City
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:09 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-019 with group key=J
+2026-06-20 01:32:09 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=19
+2026-06-20 01:32:11 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-020
+  match_date: 2026-06-16
+  stage: Group Stage
+  matchday: 1
+  group: J
+  home_team_code: AUT
+  home_team: Austria
+  away_team_code: JOR
+  away_team: Jordan
+  home_goals: 3
+  away_goals: 1
+  winner: Austria
+  result_type: home_win
+  total_goals: 4
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: San Francisco Bay Area Stadium
+  common_stadium_name: Levi's Stadium
+  city: Santa Clara
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:11 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-020 with group key=J
+2026-06-20 01:32:11 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=20
+2026-06-20 01:32:13 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-021
+  match_date: 2026-06-17
+  stage: Group Stage
+  matchday: 1
+  group: K
+  home_team_code: POR
+  home_team: Portugal
+  away_team_code: COD
+  away_team: DR Congo
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Houston Stadium
+  common_stadium_name: NRG Stadium
+  city: Houston
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:13 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-021 with group key=K
+2026-06-20 01:32:13 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=21
+2026-06-20 01:32:15 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-022
+  match_date: 2026-06-17
+  stage: Group Stage
+  matchday: 1
+  group: L
+  home_team_code: ENG
+  home_team: England
+  away_team_code: CRO
+  away_team: Croatia
+  home_goals: 4
+  away_goals: 2
+  winner: England
+  result_type: home_win
+  total_goals: 6
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Dallas Stadium
+  common_stadium_name: AT&T Stadium
+  city: Arlington
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:15 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-022 with group key=L
+2026-06-20 01:32:15 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=22
+2026-06-20 01:32:17 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-023
+  match_date: 2026-06-17
+  stage: Group Stage
+  matchday: 1
+  group: L
+  home_team_code: GHA
+  home_team: Ghana
+  away_team_code: PAN
+  away_team: Panama
+  home_goals: 1
+  away_goals: 0
+  winner: Ghana
+  result_type: home_win
+  total_goals: 1
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Toronto Stadium
+  common_stadium_name: BMO Field
+  city: Toronto
+  host_country: Canada
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:17 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-023 with group key=L
+2026-06-20 01:32:17 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=23
+2026-06-20 01:32:19 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-024
+  match_date: 2026-06-17
+  stage: Group Stage
+  matchday: 1
+  group: K
+  home_team_code: UZB
+  home_team: Uzbekistan
+  away_team_code: COL
+  away_team: Colombia
+  home_goals: 1
+  away_goals: 3
+  winner: Colombia
+  result_type: away_win
+  total_goals: 4
+  home_points: 0
+  away_points: 3
+  fifa_venue_name: Mexico City Stadium
+  common_stadium_name: Estadio Azteca
+  city: Mexico City
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:19 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-024 with group key=K
+2026-06-20 01:32:19 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=24
+2026-06-20 01:32:21 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-025
+  match_date: 2026-06-18
+  stage: Group Stage
+  matchday: 2
+  group: A
+  home_team_code: CZE
+  home_team: Czechia
+  away_team_code: RSA
+  away_team: South Africa
+  home_goals: 1
+  away_goals: 1
+  winner: Draw
+  result_type: draw
+  total_goals: 2
+  home_points: 1
+  away_points: 1
+  fifa_venue_name: Atlanta Stadium
+  common_stadium_name: Mercedes-Benz Stadium
+  city: Atlanta
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:21 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-025 with group key=A
+2026-06-20 01:32:21 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=25
+2026-06-20 01:32:23 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-026
+  match_date: 2026-06-18
+  stage: Group Stage
+  matchday: 2
+  group: B
+  home_team_code: SUI
+  home_team: Switzerland
+  away_team_code: BIH
+  away_team: Bosnia and Herzegovina
+  home_goals: 4
+  away_goals: 1
+  winner: Switzerland
+  result_type: home_win
+  total_goals: 5
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Los Angeles Stadium
+  common_stadium_name: SoFi Stadium
+  city: Los Angeles
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:23 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-026 with group key=B
+2026-06-20 01:32:23 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=26
+2026-06-20 01:32:25 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-027
+  match_date: 2026-06-18
+  stage: Group Stage
+  matchday: 2
+  group: B
+  home_team_code: CAN
+  home_team: Canada
+  away_team_code: QAT
+  away_team: Qatar
+  home_goals: 6
+  away_goals: 0
+  winner: Canada
+  result_type: home_win
+  total_goals: 6
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: BC Place Vancouver
+  common_stadium_name: BC Place
+  city: Vancouver
+  host_country: Canada
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:25 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-027 with group key=B
+2026-06-20 01:32:25 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=27
+2026-06-20 01:32:27 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-028
+  match_date: 2026-06-18
+  stage: Group Stage
+  matchday: 2
+  group: A
+  home_team_code: MEX
+  home_team: Mexico
+  away_team_code: KOR
+  away_team: Korea Republic
+  home_goals: 1
+  away_goals: 0
+  winner: Mexico
+  result_type: home_win
+  total_goals: 1
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Guadalajara Stadium
+  common_stadium_name: Estadio Akron
+  city: Guadalajara
+  host_country: Mexico
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:27 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-028 with group key=A
+2026-06-20 01:32:27 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=28
+2026-06-20 01:32:29 | INFO | P06-WORLD-CUP | {
+  match_id: WC2026-029
+  match_date: 2026-06-19
+  stage: Group Stage
+  matchday: 2
+  group: D
+  home_team_code: USA
+  home_team: United States
+  away_team_code: AUS
+  away_team: Australia
+  home_goals: 2
+  away_goals: 0
+  winner: United States
+  result_type: home_win
+  total_goals: 2
+  home_points: 3
+  away_points: 0
+  fifa_venue_name: Seattle Stadium
+  common_stadium_name: Lumen Field
+  city: Seattle
+  host_country: United States
+  source_url: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/scores-fixtures
+  dataset_cutoff: Verified through United States vs Australia, completed 2026-06-19; later matches still in progress or not yet verified
+}
+2026-06-20 01:32:29 | INFO | P06-WORLD-CUP |   Sending match_id=WC2026-029 with group key=D
+2026-06-20 01:32:29 | INFO | P06-WORLD-CUP |   MATCH MESSAGE SENT  sent=29
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | Checking for rejected records...
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | No records rejected.
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | SECTION E. Exit
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | Summary:
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | Sent 29 completed match message(s).
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | Rejected 0 match message(s).
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | Kafka topic: 'streaming-06-scenarios-case'
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | World Cup producer executed successfully!
+2026-06-20 01:32:31 | INFO | P06-WORLD-CUP | ========================
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | KAFKA_BROKER_ADDRESS_FAMILY       = v4
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | PRODUCER_MESSAGE_COUNT            = 30
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | PRODUCER_MAX_MESSAGES             = 50
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-06-20 01:39:17 | DEBUG | C06-WORLD-CUP | CONSUMER_MAX_MESSAGES             = 1000
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | === RUN START ===
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | project=C06 WORLD CUP
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | repo_dir=streaming-06-scenarios
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | python=3.14.4
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | os=Windows 11
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | shell=powershell
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | cwd=.
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | github_actions=False
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | START consumer main()
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | ROOT_DIR = .
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | DATA_DIR = data
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | OUTPUT_MATCHES_CSV = data\output\consumed_world_cup_matches.csv
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | OUTPUT_STANDINGS_CSV = data\output\world_cup_team_standings.csv
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | OUTPUT_DB = data\output\world_cup.duckdb
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | OUTPUT_CHART = data\output\world_cup_team_standings.png
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | SECTION A. Acquire
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | Loading settings from .env...
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | KAFKA_BOOTSTRAP_SERVERS  = 172.23.179.180:9092
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | KAFKA_TOPIC              = streaming-06-scenarios-case
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | KAFKA_GROUP_ID           = streaming-consumer-group-A
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | CONSUMER_TIMEOUT_SECONDS = 10.0
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | CONSUMER_MAX_MESSAGES    = 1000
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | Verifying Kafka connection...
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | Kafka port is reachable.
+2026-06-20 01:39:17 | INFO | C06-WORLD-CUP | Verifying Kafka topic...
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | Topic 'streaming-06-scenarios-case' exists.
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | Found 29 message(s) available.
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | Creating Kafka consumer...
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | Subscribed to topic: 'streaming-06-scenarios-case' (reading from beginning)
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | SECTION C. Consume and Process Messages
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:39:18 | INFO | C06-WORLD-CUP | Initializing output...
+2026-06-20 01:39:19 | INFO | C06-WORLD-CUP | Output CSV files cleared.
+2026-06-20 01:39:19 | INFO | C06-WORLD-CUP | Database initialized: world_cup.duckdb
+2026-06-20 01:39:19 | INFO | C06-WORLD-CUP | Standings chart initialized.
+2026-06-20 01:39:19 | INFO | C06-WORLD-CUP | Consuming World Cup match messages...
+2026-06-20 01:39:19 | INFO | C06-WORLD-CUP | Waiting for up to 1000 message(s).
+2026-06-20 01:39:19 | INFO | C06-WORLD-CUP | Press CTRL+C to stop early.
+
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | match=Mexico 2-0 South Africa
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | group=A
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | winner=Mexico
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | consumed=1
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | match=Korea Republic 2-1 Czechia
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | group=A
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | winner=Korea Republic
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | total_goals=3
+2026-06-20 01:39:25 | INFO | C06-WORLD-CUP | consumed=2
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | match=Canada 1-1 Bosnia and Herzegovina
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | group=B
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | consumed=3
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | match=United States 4-1 Paraguay
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | group=D
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | winner=United States
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | total_goals=5
+2026-06-20 01:39:26 | INFO | C06-WORLD-CUP | consumed=4
+2026-06-20 01:39:27 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:27 | INFO | C06-WORLD-CUP | match=Qatar 1-1 Switzerland
+2026-06-20 01:39:27 | INFO | C06-WORLD-CUP | group=B
+2026-06-20 01:39:27 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:27 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:27 | INFO | C06-WORLD-CUP | consumed=5
+2026-06-20 01:39:28 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:28 | INFO | C06-WORLD-CUP | match=Brazil 1-1 Morocco
+2026-06-20 01:39:28 | INFO | C06-WORLD-CUP | group=C
+2026-06-20 01:39:28 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:28 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:28 | INFO | C06-WORLD-CUP | consumed=6
+2026-06-20 01:39:29 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:29 | INFO | C06-WORLD-CUP | match=Haiti 0-1 Scotland
+2026-06-20 01:39:29 | INFO | C06-WORLD-CUP | group=C
+2026-06-20 01:39:29 | INFO | C06-WORLD-CUP | winner=Scotland
+2026-06-20 01:39:29 | INFO | C06-WORLD-CUP | total_goals=1
+2026-06-20 01:39:29 | INFO | C06-WORLD-CUP | consumed=7
+2026-06-20 01:39:30 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:30 | INFO | C06-WORLD-CUP | match=Australia 2-0 Türkiye
+2026-06-20 01:39:30 | INFO | C06-WORLD-CUP | group=D
+2026-06-20 01:39:30 | INFO | C06-WORLD-CUP | winner=Australia
+2026-06-20 01:39:30 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:30 | INFO | C06-WORLD-CUP | consumed=8
+2026-06-20 01:39:31 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:31 | INFO | C06-WORLD-CUP | match=Côte d'Ivoire 1-0 Ecuador
+2026-06-20 01:39:31 | INFO | C06-WORLD-CUP | group=E
+2026-06-20 01:39:31 | INFO | C06-WORLD-CUP | winner=Côte d'Ivoire
+2026-06-20 01:39:31 | INFO | C06-WORLD-CUP | total_goals=1
+2026-06-20 01:39:31 | INFO | C06-WORLD-CUP | consumed=9
+2026-06-20 01:39:32 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:32 | INFO | C06-WORLD-CUP | match=Germany 7-1 Curaçao
+2026-06-20 01:39:32 | INFO | C06-WORLD-CUP | group=E
+2026-06-20 01:39:32 | INFO | C06-WORLD-CUP | winner=Germany
+2026-06-20 01:39:32 | INFO | C06-WORLD-CUP | total_goals=8
+2026-06-20 01:39:32 | INFO | C06-WORLD-CUP | consumed=10
+2026-06-20 01:39:33 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:33 | INFO | C06-WORLD-CUP | match=Netherlands 2-2 Japan
+2026-06-20 01:39:33 | INFO | C06-WORLD-CUP | group=F
+2026-06-20 01:39:33 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:33 | INFO | C06-WORLD-CUP | total_goals=4
+2026-06-20 01:39:33 | INFO | C06-WORLD-CUP | consumed=11
+2026-06-20 01:39:34 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:34 | INFO | C06-WORLD-CUP | match=Sweden 5-1 Tunisia
+2026-06-20 01:39:34 | INFO | C06-WORLD-CUP | group=F
+2026-06-20 01:39:34 | INFO | C06-WORLD-CUP | winner=Sweden
+2026-06-20 01:39:34 | INFO | C06-WORLD-CUP | total_goals=6
+2026-06-20 01:39:34 | INFO | C06-WORLD-CUP | consumed=12
+2026-06-20 01:39:35 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:35 | INFO | C06-WORLD-CUP | match=Belgium 1-1 Egypt
+2026-06-20 01:39:35 | INFO | C06-WORLD-CUP | group=G
+2026-06-20 01:39:35 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:35 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:35 | INFO | C06-WORLD-CUP | consumed=13
+2026-06-20 01:39:36 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:36 | INFO | C06-WORLD-CUP | match=IR Iran 2-2 New Zealand
+2026-06-20 01:39:36 | INFO | C06-WORLD-CUP | group=G
+2026-06-20 01:39:36 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:36 | INFO | C06-WORLD-CUP | total_goals=4
+2026-06-20 01:39:36 | INFO | C06-WORLD-CUP | consumed=14
+2026-06-20 01:39:38 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:38 | INFO | C06-WORLD-CUP | match=Spain 0-0 Cabo Verde
+2026-06-20 01:39:38 | INFO | C06-WORLD-CUP | group=H
+2026-06-20 01:39:38 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:38 | INFO | C06-WORLD-CUP | total_goals=0
+2026-06-20 01:39:38 | INFO | C06-WORLD-CUP | consumed=15
+2026-06-20 01:39:39 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:39 | INFO | C06-WORLD-CUP | match=Saudi Arabia 1-1 Uruguay
+2026-06-20 01:39:39 | INFO | C06-WORLD-CUP | group=H
+2026-06-20 01:39:39 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:39 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:39 | INFO | C06-WORLD-CUP | consumed=16
+2026-06-20 01:39:40 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:40 | INFO | C06-WORLD-CUP | match=France 3-1 Senegal
+2026-06-20 01:39:40 | INFO | C06-WORLD-CUP | group=I
+2026-06-20 01:39:40 | INFO | C06-WORLD-CUP | winner=France
+2026-06-20 01:39:40 | INFO | C06-WORLD-CUP | total_goals=4
+2026-06-20 01:39:40 | INFO | C06-WORLD-CUP | consumed=17
+2026-06-20 01:39:41 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:41 | INFO | C06-WORLD-CUP | match=Iraq 1-4 Norway
+2026-06-20 01:39:41 | INFO | C06-WORLD-CUP | group=I
+2026-06-20 01:39:41 | INFO | C06-WORLD-CUP | winner=Norway
+2026-06-20 01:39:41 | INFO | C06-WORLD-CUP | total_goals=5
+2026-06-20 01:39:41 | INFO | C06-WORLD-CUP | consumed=18
+2026-06-20 01:39:43 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:43 | INFO | C06-WORLD-CUP | match=Argentina 3-0 Algeria
+2026-06-20 01:39:43 | INFO | C06-WORLD-CUP | group=J
+2026-06-20 01:39:43 | INFO | C06-WORLD-CUP | winner=Argentina
+2026-06-20 01:39:43 | INFO | C06-WORLD-CUP | total_goals=3
+2026-06-20 01:39:43 | INFO | C06-WORLD-CUP | consumed=19
+2026-06-20 01:39:44 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:44 | INFO | C06-WORLD-CUP | match=Austria 3-1 Jordan
+2026-06-20 01:39:44 | INFO | C06-WORLD-CUP | group=J
+2026-06-20 01:39:44 | INFO | C06-WORLD-CUP | winner=Austria
+2026-06-20 01:39:44 | INFO | C06-WORLD-CUP | total_goals=4
+2026-06-20 01:39:44 | INFO | C06-WORLD-CUP | consumed=20
+2026-06-20 01:39:45 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:45 | INFO | C06-WORLD-CUP | match=Portugal 1-1 DR Congo
+2026-06-20 01:39:45 | INFO | C06-WORLD-CUP | group=K
+2026-06-20 01:39:45 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:45 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:45 | INFO | C06-WORLD-CUP | consumed=21
+2026-06-20 01:39:46 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:46 | INFO | C06-WORLD-CUP | match=England 4-2 Croatia
+2026-06-20 01:39:46 | INFO | C06-WORLD-CUP | group=L
+2026-06-20 01:39:46 | INFO | C06-WORLD-CUP | winner=England
+2026-06-20 01:39:46 | INFO | C06-WORLD-CUP | total_goals=6
+2026-06-20 01:39:46 | INFO | C06-WORLD-CUP | consumed=22
+2026-06-20 01:39:48 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:48 | INFO | C06-WORLD-CUP | match=Ghana 1-0 Panama
+2026-06-20 01:39:48 | INFO | C06-WORLD-CUP | group=L
+2026-06-20 01:39:48 | INFO | C06-WORLD-CUP | winner=Ghana
+2026-06-20 01:39:48 | INFO | C06-WORLD-CUP | total_goals=1
+2026-06-20 01:39:48 | INFO | C06-WORLD-CUP | consumed=23
+2026-06-20 01:39:49 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:49 | INFO | C06-WORLD-CUP | match=Uzbekistan 1-3 Colombia
+2026-06-20 01:39:49 | INFO | C06-WORLD-CUP | group=K
+2026-06-20 01:39:49 | INFO | C06-WORLD-CUP | winner=Colombia
+2026-06-20 01:39:49 | INFO | C06-WORLD-CUP | total_goals=4
+2026-06-20 01:39:49 | INFO | C06-WORLD-CUP | consumed=24
+2026-06-20 01:39:51 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:51 | INFO | C06-WORLD-CUP | match=Czechia 1-1 South Africa
+2026-06-20 01:39:51 | INFO | C06-WORLD-CUP | group=A
+2026-06-20 01:39:51 | INFO | C06-WORLD-CUP | winner=Draw
+2026-06-20 01:39:51 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:51 | INFO | C06-WORLD-CUP | consumed=25
+2026-06-20 01:39:52 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:52 | INFO | C06-WORLD-CUP | match=Switzerland 4-1 Bosnia and Herzegovina
+2026-06-20 01:39:52 | INFO | C06-WORLD-CUP | group=B
+2026-06-20 01:39:52 | INFO | C06-WORLD-CUP | winner=Switzerland
+2026-06-20 01:39:52 | INFO | C06-WORLD-CUP | total_goals=5
+2026-06-20 01:39:52 | INFO | C06-WORLD-CUP | consumed=26
+2026-06-20 01:39:54 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:54 | INFO | C06-WORLD-CUP | match=Canada 6-0 Qatar
+2026-06-20 01:39:54 | INFO | C06-WORLD-CUP | group=B
+2026-06-20 01:39:54 | INFO | C06-WORLD-CUP | winner=Canada
+2026-06-20 01:39:54 | INFO | C06-WORLD-CUP | total_goals=6
+2026-06-20 01:39:54 | INFO | C06-WORLD-CUP | consumed=27
+2026-06-20 01:39:55 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:55 | INFO | C06-WORLD-CUP | match=Mexico 1-0 Korea Republic
+2026-06-20 01:39:55 | INFO | C06-WORLD-CUP | group=A
+2026-06-20 01:39:55 | INFO | C06-WORLD-CUP | winner=Mexico
+2026-06-20 01:39:55 | INFO | C06-WORLD-CUP | total_goals=1
+2026-06-20 01:39:55 | INFO | C06-WORLD-CUP | consumed=28
+2026-06-20 01:39:57 | INFO | C06-WORLD-CUP | MATCH MESSAGE ACCEPTED
+2026-06-20 01:39:57 | INFO | C06-WORLD-CUP | match=United States 2-0 Australia
+2026-06-20 01:39:57 | INFO | C06-WORLD-CUP | group=D
+2026-06-20 01:39:57 | INFO | C06-WORLD-CUP | winner=United States
+2026-06-20 01:39:57 | INFO | C06-WORLD-CUP | total_goals=2
+2026-06-20 01:39:57 | INFO | C06-WORLD-CUP | consumed=29
+2026-06-20 01:40:07 | INFO | C06-WORLD-CUP | No message received within 10.0s timeout.
+2026-06-20 01:40:07 | INFO | C06-WORLD-CUP | Producer finished or paused. Stopping consumer.
+2026-06-20 01:40:07 | INFO | C06-WORLD-CUP | Kafka consumer closed.
+2026-06-20 01:40:07 | INFO | C06-WORLD-CUP | Saving output artifacts...
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | WROTE OUTPUT_MATCHES_CSV = data\output\consumed_world_cup_matches.csv
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | WROTE OUTPUT_STANDINGS_CSV = data\output\world_cup_team_standings.csv
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | WROTE OUTPUT_DB = data\output\world_cup.duckdb
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | WROTE OUTPUT_CHART = data\output\world_cup_team_standings.png
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Database and chart resources closed.
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | SECTION E. Exit
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Summary:
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Consumed 29 match message(s).
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Skipped  0 match message(s).
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Topic: 'streaming-06-scenarios-case'
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Total goals:   91
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Average goals: 3.14 per match
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Home wins:     16
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Away wins:     3
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Draws:         10
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | CURRENT GROUP LEADERS
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group A: Mexico — 6 point(s), GD +3
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group B: Canada — 4 point(s), GD +6
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group C: Scotland — 3 point(s), GD +1
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group D: United States — 6 point(s), GD +5
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group E: Germany — 3 point(s), GD +6
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group F: Sweden — 3 point(s), GD +4
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group G: IR Iran — 1 point(s), GD +0
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group H: Saudi Arabia — 1 point(s), GD +0
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group I: Norway — 3 point(s), GD +3
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group J: Argentina — 3 point(s), GD +3
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group K: Colombia — 3 point(s), GD +2
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | Group L: England — 3 point(s), GD +2
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | World Cup consumer executed successfully!
+2026-06-20 01:40:08 | INFO | C06-WORLD-CUP | ========================
+2026-06-20 01:57:30 | DEBUG | C06 | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:57:30 | DEBUG | C06 | KAFKA_BROKER_ADDRESS_FAMILY       = v4
+2026-06-20 01:57:30 | DEBUG | C06 | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:57:30 | DEBUG | C06 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-06-20 01:57:30 | DEBUG | C06 | PRODUCER_MESSAGE_COUNT            = 30
+2026-06-20 01:57:30 | DEBUG | C06 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-06-20 01:57:30 | DEBUG | C06 | PRODUCER_MAX_MESSAGES             = 50
+2026-06-20 01:57:30 | DEBUG | C06 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-06-20 01:57:30 | DEBUG | C06 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-06-20 01:57:30 | DEBUG | C06 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-06-20 01:57:30 | DEBUG | C06 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-06-20 01:57:30 | DEBUG | C06 | CONSUMER_MAX_MESSAGES             = 1000
+2026-06-20 01:57:30 | DEBUG | P06 | KAFKA_BOOTSTRAP_SERVERS           = 172.23.179.180:9092
+2026-06-20 01:57:30 | DEBUG | P06 | KAFKA_BROKER_ADDRESS_FAMILY       = v4
+2026-06-20 01:57:30 | DEBUG | P06 | KAFKA_TOPIC                       = streaming-06-scenarios-case
+2026-06-20 01:57:30 | DEBUG | P06 | KAFKA_CLEAR_TOPIC_ON_START        = true
+2026-06-20 01:57:30 | DEBUG | P06 | PRODUCER_MESSAGE_COUNT            = 30
+2026-06-20 01:57:30 | DEBUG | P06 | PRODUCER_MESSAGE_INTERVAL_SECONDS = 2
+2026-06-20 01:57:30 | DEBUG | P06 | PRODUCER_MAX_MESSAGES             = 50
+2026-06-20 01:57:30 | DEBUG | P06 | PRODUCER_POLL_INTERVAL_SECONDS    = 15
+2026-06-20 01:57:30 | DEBUG | P06 | KAFKA_GROUP_ID                    = streaming-consumer-group-A
+2026-06-20 01:57:30 | DEBUG | P06 | KAFKA_AUTO_OFFSET_RESET           = earliest
+2026-06-20 01:57:30 | DEBUG | P06 | CONSUMER_TIMEOUT_SECONDS          = 10
+2026-06-20 01:57:30 | DEBUG | P06 | CONSUMER_MAX_MESSAGES             = 1000
