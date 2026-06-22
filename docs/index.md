@@ -100,6 +100,19 @@ I replaced the original sales dataset with a new football dataset. The sales,
 product, currency, discount, and regional fields are not used by the custom
 producer or consumer.
 
+### Reproducibility Note
+
+This project uses a fixed CSV snapshot rather than a live FIFA API connection.
+The results reflect the completed matches available at the value recorded in
+the `dataset_cutoff` field.
+
+Using a fixed snapshot makes the project reproducible. Running the producer
+with the same CSV file should generate the same 29 Kafka messages and the same
+final standings.
+
+To analyze additional matches, update `data/world_cup_matches.csv` while
+preserving the required columns and unique match IDs.
+
 ### Kafka Messages
 
 The custom producer is:
